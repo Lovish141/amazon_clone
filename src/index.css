@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Poppins:wght@200&display=swap');
 body{
     overflow-x: hidden;
     background-color: rgb(234, 237, 237);
+    font-family: 'PT Sans', sans-serif; 
 }
