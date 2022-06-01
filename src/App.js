@@ -14,6 +14,7 @@ import { setUser } from './redux/actions'
 // import Payment from './pages/Payment/Payment'
 import {loadStripe} from '@stripe/stripe-js'
 import {Elements} from '@stripe/react-stripe-js'
+// import Order from './pages/Order/Order'
 // import Loading from './components/Loading/Loading'
 
 const Home=lazy(()=>import('./pages/Home/Home'))
@@ -21,7 +22,7 @@ const Login=lazy(()=>import('./pages/Login/Login'))
 const Register=lazy(()=>import('./pages/Register/Register'))
 const Checkout=lazy(()=>import('./pages/Checkout/Checkout'))
 const Payment=lazy(()=>import('./pages/Payment/Payment'))
-// const Order=lazy(()=>import('./pages/Order/Order'))
+const Order=lazy(()=>import('./pages/Order/Order'))
 const SingleProduct=lazy(()=>import('./pages/SingleProduct/SingleProduct'))
 const Loading=lazy(()=>import('./components/Loading/Loading'))
 
@@ -56,6 +57,7 @@ auth.onAuthStateChanged((authUser)=>{
           <Elements stripe={promise}>
             <Payment/>
           </Elements>} />
+          <Route path='/orders' element={<Order/>} />
        </Routes>
        </Suspense>
       </div>
